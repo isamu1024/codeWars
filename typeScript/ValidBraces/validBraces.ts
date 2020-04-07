@@ -4,35 +4,34 @@ function validBraces(braces: string): boolean {
         return false;
     }
 
-    let stack: string[] = [];
+    let stack: number[] = [];
 
-    let open : string[] = [`{`, `[`, `(`];
-    let close : string[] = [`}`, `]`, `)`];
+    let open: string[] = [`{`, `[`, `(`];
+    let close: string[] = [`}`, `]`, `)`];
 
-    for (let i: number = 0; i < braces.length; i++) {
+
+    for (let i: number = 0; i < braces.length; i++ ) {
         if (open.includes(braces.charAt(i))) {
-            stack.push(braces.charAt(i));
-        } else if (close.includes(braces.charAt(i))) {
+
+            stack.push(open.indexOf(braces.charAt(i)));
+
+        } else if (close.includes(braces.charAt(i)) && (close.indexOf(braces.charAt(i)) == stack[stack.length -1])) {
             stack.pop();
         } else {
             return false;
         }
     }
 
-    if (stack.length > 0) {
-        return false;
+        if (stack.length > 0) {
+            return false;
+        }
+
+        return true;
+
+
     }
 
-    return true;
 
- 
-}
-
-if (validBraces(`[(])`)) {
-    console.log("yep");
-} else {
-    console.log("nope");
-};
 
 
 
