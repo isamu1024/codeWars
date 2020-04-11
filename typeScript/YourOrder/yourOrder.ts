@@ -1,13 +1,8 @@
-function order(words: string) {
-  // let re = new RegExp(/\w*[0-9]\w*/g);
-
-  // let strArray;
-
-  // strArray = words.match(re);
-
-  // strArray?.sort()
-
-  let test = words.split("");
+function order(words: string): string {
+	return words
+		.split(" ")
+		.sort((a, b) => Number(a.match(/(\d+)/g)) - Number(b.match(/(\d+)/g)))
+		.join(" ");
 }
 
-order(`is2 Thi1s T4est 3a`);
+console.log(order(`is2 Thi1s T4est 3a`));
