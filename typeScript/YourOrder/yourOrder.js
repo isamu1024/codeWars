@@ -1,9 +1,8 @@
-"use strict";
-exports.__esModule = true;
 function order(words) {
-    var re = new RegExp(/\w*[0-9]\w*/gm);
-    var strArray = words.split(re);
-    strArray.forEach(function (element) { console.log(element); });
+  // let re = new RegExp(/\w*[0-9]\w*/g);
+  // let strArray;
+  // strArray = words.match(re);
+  // strArray?.sort()
+  var test = words.split(/\w*/g);
 }
-exports.order = order;
-order("fe4r the r3pear");
+order("is2 Thi1s T4est 3a");

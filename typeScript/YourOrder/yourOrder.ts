@@ -1,14 +1,13 @@
-export function order(words: string){
-  
-  
-  let re = new RegExp(/\w*[0-9]\w*/gm);
+function order(words: string) {
+  // let re = new RegExp(/\w*[0-9]\w*/g);
 
-  let strArray :string[] = [];
-  strArray.push(re.test(words));
+  // let strArray;
 
-  strArray.forEach(element => { console.log(element)});
+  // strArray = words.match(re);
 
+  // strArray?.sort()
+
+  let test = words.split("");
 }
 
-order(`fear th3 r3pear`);
-
+order(`is2 Thi1s T4est 3a`);
