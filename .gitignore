@@ -5,3 +5,4 @@ typeScript/ValidBraces/test.ts
 codeWars.code-workspace
 Training/Regexp/regExp.txt
 typeScript/PrimesInNumbers/PrimeInNumbers.js
+typeScript/PrimesInNumbers/tsconfig.json
