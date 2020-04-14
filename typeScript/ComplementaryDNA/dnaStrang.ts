@@ -1,36 +1,24 @@
 export class Kata {
+	static dnaStrand(dna: string) {
+		let output: string = ``;
 
-    public dnaC: string; 
-
-    constructor(dna: string) {
-        this.dnaC = this.dnaStrand(dna);
-    } 
-
-    dnaStrand(dna: string) : string {
-
-        for (let i: number = 0; i < dna.length; i++) {
-            switch (dna.charAt(i)) {
-                case "A":
-                    dna.charAt(i).replace("A", "T");
-                    break;
-                case "T":
-                    dna.charAt(i).replace("T", "A");
-                    break;
-                case "C":
-                    dna.charAt(i).replace("C", "G");
-                    break;
-                case "G" :
-                    dna.charAt(i).replace("G","C");   
-            }
-        }
-
-        return dna;
-
-    }
+		for (let i: number = 0; i < dna.length; i++) {
+			switch (dna.charAt(i)) {
+				case "A":
+					output += `T`;
+					break;
+				case "T":
+					output += `A`;
+					break;
+				case "C":
+					output += `G`;
+					break;
+				case "G":
+					output += `C`;
+			}
+		}
+		return output;
+	}
 }
 
-let toto = new Kata("ATCG");
-console.log(toto.dnaC);
-
-
-
+console.log(Kata.dnaStrand("AAAAAA"));
