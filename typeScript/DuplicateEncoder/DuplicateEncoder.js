@@ -1,20 +1,18 @@
 "use strict";
 exports.__esModule = true;
 function duplicateEncode(word) {
-    var output = [];
-    var stringArray = word.split(" ");
-    stringArray.forEach(function (element) {
-        var tempMap = [];
-        for (var i = 0; i < element.length; i++) {
-            element.lastIndexOf(element.charAt(i)) !=
-                element.indexOf(element.charAt(i))
-                ? tempMap.push(")")
-                : tempMap.push("(");
-        }
-        output.push(tempMap.join(""));
+  var output = "";
+  var isPresent = function (c, w) {
+    return c.lastIndexOf(w) != c.indexOf(w) ? ")" : "(";
+  };
+  word
+    .toLowerCase()
+    .split("")
+    .forEach(function (element) {
+      debugger;
+      output += isPresent(word.split(""), element);
     });
-    console.log(output.join(" "));
+  return output;
 }
 exports.duplicateEncode = duplicateEncode;
-duplicateEncode("toto est un peu concon");
-//inputs.reduce((counter, {status}) => status == 0 ? counter + 1 : counter, 0);
+console.log(duplicateEncode("PePPPmPOPPPlPnb"));
