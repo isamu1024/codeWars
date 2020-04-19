@@ -25,8 +25,3 @@ for (let n = 0; n < 10; ++n) {
   let threes = results.filter((x) => x == 3).length;
   debugger;
 }
-
-// countDecimals = function (value) {
-//     if (Math.floor(value) === value) return 0;
-//     return value.toString().split(".")[1].length || 0;
-//   };
