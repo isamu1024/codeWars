@@ -5,7 +5,7 @@ export function rectangleRotation(a: number, b: number) {
     Math.abs((-a / 2) * Math.cos(angle) - (b / 2) * Math.sin(angle))
   );
 
-  for (let x: number = 0; x <= max; x++) {
+  for (let x: number = -max; x <= max; x++) {
     for (let y: number = -max; y <= max; y++) {
       let rotateX: number = x * Math.cos(angle) - y * Math.sin(angle);
       let rotateY: number = y * Math.cos(angle) + x * Math.sin(angle);
@@ -19,5 +19,5 @@ export function rectangleRotation(a: number, b: number) {
       }
     }
   }
-  return count * 2 - 3;
+  return count;
 }
