@@ -1,6 +1,8 @@
 export const convertFrac = (lst: [number, number][]): string => {
 	let str: string = ``;
 
+	if (lst.length === 0) return str;
+
 	let pgcd = (a: any, b: any): any => {
 		let r: number;
 		a > b ? (r = a % b) : (r = b % a);
@@ -13,8 +15,8 @@ export const convertFrac = (lst: [number, number][]): string => {
 		}
 	});
 
-	let ppcm: number = denArray.reduce(
-		(a: number, b: number) => (a * b) / pgcd(a, b)
+	let ppcm: number = denArray.reduce((a: number, b: number) =>
+		a > b ? (a * b) / pgcd(a, b) : (a * b) / pgcd(b, a)
 	);
 
 	let multiply: any = lst.map((x) => x.map((val, idx) => val * (ppcm / x[1])));
@@ -28,8 +30,7 @@ export const convertFrac = (lst: [number, number][]): string => {
 
 console.log(
 	convertFrac([
-		[69, 130],
-		[87, 1310],
-		[3, 4],
+		[2, 3],
+		[8, 9],
 	])
 );
