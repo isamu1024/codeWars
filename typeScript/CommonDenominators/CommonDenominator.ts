@@ -3,7 +3,7 @@ export const convertFrac = (lst: [number, number][]): string => {
 
   if (lst.length === 0) return str;
 
-  let pgcd = (a: any, b: any): any => {
+  let pgcd = (a: number, b: number): number => {
     let r: number;
     a > b ? (r = a % b) : (r = b % a);
     return r === 0 ? b : pgcd(b, r);
