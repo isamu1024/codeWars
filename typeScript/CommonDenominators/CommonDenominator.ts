@@ -9,23 +9,23 @@ export const convertFrac = (lst: [number, number][]): string => {
     return r === 0 ? b : pgcd(b, r);
   };
 
-  let simpLst = lst.map((x) =>
+  const simpLst = lst.map((x) =>
     x.map((val) =>
       x[0] > x[1] ? val / pgcd(x[0], x[1]) : val / pgcd(x[1], x[0])
     )
   );
 
-  let denArray: any = simpLst.concat.apply([], simpLst).filter((v, i) => {
+  const denArray: any = simpLst.concat.apply([], simpLst).filter((v, i) => {
     if (i % 2 !== 0) {
       return v;
     }
   });
 
-  let ppcm: number = denArray.reduce((a: number, b: number) =>
+  const ppcm: number = denArray.reduce((a: number, b: number) =>
     a > b ? (a * b) / pgcd(a, b) : (a * b) / pgcd(b, a)
   );
 
-  let multiply: any = simpLst.map((x) =>
+  const multiply: any = simpLst.map((x) =>
     x.map((val, idx) => val * (ppcm / x[1]))
   );
 
