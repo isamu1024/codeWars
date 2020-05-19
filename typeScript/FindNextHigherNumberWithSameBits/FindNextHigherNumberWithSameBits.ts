@@ -1,34 +1,27 @@
-function nextHigher(n: number) {
-  let binArray: number[] = n
-    .toString(2)
-    .split(``)
-    .map((x) => Number(x));
+function nextHigher(n: number): number {
+	let binArray: number[] = n
+		.toString(2)
+		.split(``)
+		.map((x) => Number(x));
 
-  //debugger;
+	binArray.unshift(0);
 
-  if (binArray.reduce((prev, val) => prev + val) == binArray.length)
-    binArray.push(0);
+	debugger;
 
-  //debugger;
+	let cursor: [number, number] = [Number.MAX_VALUE, Number.MAX_VALUE];
 
-  let indexes: [number, number] = [0, 0];
+	binArray.map((val, idx, arr) =>
+		arr[idx] === 0 && arr[idx + 1] === 1 ? (cursor[0] = idx) : false
+	);
 
-  binArray.map((val, idx) =>
-    val === 0 ? (indexes[0] = idx) : (indexes[1] = idx)
-  );
-
-  debugger;
-
-  let toto = binArray
-    .map((val, idx) => {
-      if (idx === indexes[0]) return (val = binArray[idx + 1]);
-      if (idx === indexes[1]) return (val = binArray[idx - 1]);
-      return val;
-    })
-    .reverse()
-    .reduce(
-      (prev, curr, idx) => Number(curr) * Math.pow(2, idx) + Number(prev)
-    );
+	return binArray
+		.map((val, idx, arr) => {
+			if (idx === cursor[0]) return 1;
+			if (idx === cursor[0] + 1) return 0;
+			return val;
+		})
+		.reverse()
+		.reduce((prev, curr, idx) => curr * Math.pow(2, idx) + prev);
 }
 
-console.log(nextHigher(127));
+console.log(nextHigher(1022));
