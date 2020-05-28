@@ -1,5 +1,5 @@
 class G964 {
-  public static primeFactors = (n) => {
+  public static primeFactors = (n: number) => {
     let i: number = 2;
     let fact: number[] = [];
     let output: string = ``;
