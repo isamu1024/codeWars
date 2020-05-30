@@ -1,40 +1,22 @@
 function nextHigher(n: number): number {
-  //convert number to binary array
-  let binArray: number[] = n
-    .toString(2)
-    .split(``)
-    .map((x) => Number(x))
-    .reverse();
+	// convert n into bit[] (! order) and get sum of "1"
+	const nbOfOne = (x: number) =>
+		x
+			.toString(2)
+			.split(``)
+			.map((x) => Number(x))
+			.reduce((a, b) => a + b);
 
-  binArray.push(0);
+	const nSum: number = nbOfOne(n);
+	let next: number = ++n;
 
-  debugger;
+	// iterate to find the next higher number with the same sum of 1 (soooo dirty :((( )
 
-  //const posZero: number[] = [];
+	while (nbOfOne(next) != nSum) {
+		next++;
+	}
 
-  //   for (let i = 0; i <= binArray.length; i++) {
-  //     if (binArray[i] === 0) posZero.push(i);
-  //   }
-
-  //   let posOne: number[] = [];
-
-  //   for (let i = 0; i <= binArray.length; i++) {
-  //     if (binArray[i] === 1) posOne.push(i);
-  //   }
-
-  let test: number = n;
-
-  if (Math.pow(binArray.lastIndexOf(0), 2) < Math.pow(binArray.indexOf(1), 2)) {
-    test =
-      n - Math.pow(binArray.lastIndexOf(1), 2) + (binArray.lastIndexOf(0), 2);
-  }
-
-  debugger;
-
-  //swap
-
-  //convert binary array to number
-  return binArray.reduce((prev, curr, idx) => curr * Math.pow(2, idx) + prev);
+	return next;
 }
 
-console.log(nextHigher(127));
+console.log(nextHigher(129));
