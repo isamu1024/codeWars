@@ -18,18 +18,61 @@
  */
 
 export class Connect4 {
-  private grid: Player[][] = new Array();
-  private players: Array<Player> = [];
+  public grid: Player[][] = new Array();
+  private players: Player[] = [];
+  private turn: number;
 
   constructor() {
+    this.generate(7);
     this.players.push(new Player(1));
     this.players.push(new Player(2));
+    this.turn = 1;
+    this.gameLogic();
   }
 
-  private generate() {}
+  private gameLogic() {}
 
-  play(col: number): string {
-    return ` to do`;
+  private generate(n: number) {
+    for (let i = 0; i < n; ++i) this.grid[i] = [];
+  }
+
+  private who(): Player {
+    return this.turn % 2 === 0 ? this.players[1] : this.players[0];
+  }
+
+  public play(col: number) {
+    !this.isFull(this.grid[col]) ? this.addToCol(col) : this.displayFull();
+    let played: string = `Player ${this.who()} has a turn`;
+    this.turn++;
+    this.gameLogic();
+    return played;
+  }
+
+  private isFull(row: Player[]): boolean {
+    return row.length === 7 ? true : false;
+  }
+
+  private displayFull() {
+    console.log("Column full!");
+  }
+
+  private noWinner() {
+    if (this.turn == 42) console.log("No winner");
+  }
+
+  private returTurn() {
+    return;
+  }
+
+  private addToCol(col: number) {
+    this.grid[col].push(this.who());
+  }
+
+  private Check(token: Player) {
+    let stack: Player[];
+    const flat = this.grid.map((val, idx, arr) => {
+      stack.push(val[idx]);
+    });
   }
 }
 
@@ -41,6 +84,22 @@ export class Player {
   }
 }
 
-let game = new Connect4();
+let game;
+game = new Connect4();
+game.play(0);
+game.play(0);
+game.play(0);
+game.play(0);
+game.play(0);
+game.play(0);
+game.play(0);
+game.play(0);
+// game.play(2);
+// game.play(2);
+// game.play(3);
+// game.play(3);
+// game.play(4);
+// game.play(4);
+console.log(game.grid);
 
-d;
+debugger;
