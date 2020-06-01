@@ -42,6 +42,7 @@ export class Connect4 {
 
   public play(col: number) {
     !this.isFull(this.grid[col]) ? this.addToCol(col) : this.displayFull();
+    this.check(col);
     let played: string = `Player ${this.who()} has a turn`;
     this.turn++;
     this.gameLogic();
@@ -57,7 +58,7 @@ export class Connect4 {
   }
 
   private noWinner() {
-    if (this.turn == 42) console.log("No winner");
+    if (this.turn === 42) console.log("No winner");
   }
 
   private returTurn() {
@@ -68,11 +69,14 @@ export class Connect4 {
     this.grid[col].push(this.who());
   }
 
-  private Check(token: Player) {
-    let stack: Player[];
-    const flat = this.grid.map((val, idx, arr) => {
-      stack.push(val[idx]);
-    });
+  private check(col: number) {
+   
+    let stack: number[]= [];
+    
+
+    for (let i = 0; i <= this.grid.length; i++) {
+      this.grid[i].length >= this.grid[col].length ? stack.push(1)
+    }
   }
 }
 
@@ -88,18 +92,15 @@ let game;
 game = new Connect4();
 game.play(0);
 game.play(0);
-game.play(0);
-game.play(0);
-game.play(0);
-game.play(0);
-game.play(0);
-game.play(0);
-// game.play(2);
+game.play(1);
+game.play(1);
+game.play(2);
+game.play(2);
+game.play(3);
+debugger;
 // game.play(2);
 // game.play(3);
 // game.play(3);
 // game.play(4);
 // game.play(4);
 console.log(game.grid);
-
-debugger;
