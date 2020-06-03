@@ -18,86 +18,92 @@
  */
 
 export class Connect4 {
-  public grid: Player[][] = new Array();
-  private players: Player[] = [];
-  private turn: number;
+	public grid: Player[][] = new Array();
+	private players: Player[] = [];
+	private turn: number;
 
-  constructor() {
-    this.generate(7);
-    this.players.push(new Player(1));
-    this.players.push(new Player(2));
-    this.turn = 1;
-    this.gameLogic();
-  }
+	constructor() {
+		this.generate(7);
+		this.players.push(new Player(1));
+		this.players.push(new Player(2));
+		this.turn = 1;
+		this.gameLogic();
+	}
 
-  private gameLogic() {}
+	private gameLogic() {}
 
-  private generate(n: number) {
-    for (let i = 0; i < n; ++i) this.grid[i] = [];
-  }
+	private generate(n: number) {
+		for (let i = 0; i < n; ++i) this.grid[i] = [];
+	}
 
-  private who(): Player {
-    return this.turn % 2 === 0 ? this.players[1] : this.players[0];
-  }
+	private who(): Player {
+		return this.turn % 2 === 0 ? this.players[1] : this.players[0];
+	}
 
-  public play(col: number) {
-    !this.isFull(this.grid[col]) ? this.addToCol(col) : this.displayFull();
-    this.check(col);
-    let played: string = `Player ${this.who()} has a turn`;
-    this.turn++;
-    this.gameLogic();
-    return played;
-  }
+	public play(col: number) {
+		!this.isFull(this.grid[col]) ? this.addToCol(col) : this.displayFull();
 
-  private isFull(row: Player[]): boolean {
-    return row.length === 7 ? true : false;
-  }
+		this.turn >= 6 ? this.horCheck(col) : false; // repasser à 7 après tests.
 
-  private displayFull() {
-    console.log("Column full!");
-  }
+		let played: string = `Player ${this.who()} has a turn`;
+		this.turn++;
+		this.gameLogic();
+		return played;
+	}
 
-  private noWinner() {
-    if (this.turn === 42) console.log("No winner");
-  }
+	private isFull(row: Player[]): boolean {
+		return row.length === 7 ? true : false;
+	}
 
-  private returTurn() {
-    return;
-  }
+	private displayFull() {
+		console.log("Column full!");
+	}
 
-  private addToCol(col: number) {
-    this.grid[col].push(this.who());
-  }
+	private noWinner() {
+		if (this.turn === 42) console.log("No winner");
+	}
 
-  private check(col: number) {
-   
-    let stack: number[]= [];
-    
+	private addToCol(col: number) {
+		this.grid[col].push(this.who());
+	}
 
-    for (let i = 0; i <= this.grid.length; i++) {
-      this.grid[i].length >= this.grid[col].length ? stack.push(1)
-    }
-  }
+	// vérifie si une solution horyzontale est possible
+	private horCheck(col: number) {
+		let stack: number[] = [];
+		let isValid: boolean = false;
+
+		for (let i = 0; i <= this.grid.length; i++) {
+			this.grid[i] === undefined
+				? stack.splice(0, stack.length)
+				: this.grid[i].length >= this.grid[col].length
+				? stack.push(i)
+				: stack.length >= 4
+				? (isValid = true)
+				: stack.splice(0, stack.length);
+		}
+	}
 }
 
-export class Player {
-  public id: number;
+export abstract class Check {}
 
-  constructor(id: number) {
-    this.id = id;
-  }
+export class Player {
+	public id: number;
+
+	constructor(id: number) {
+		this.id = id;
+	}
 }
 
 let game;
 game = new Connect4();
-game.play(0);
-game.play(0);
 game.play(1);
 game.play(1);
 game.play(2);
 game.play(2);
 game.play(3);
-debugger;
+game.play(3);
+game.play(4);
+
 // game.play(2);
 // game.play(3);
 // game.play(3);
