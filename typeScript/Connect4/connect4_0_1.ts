@@ -5,45 +5,12 @@ function flatMap<T, U>(
 	return Array.prototype.concat(...array.map(callbackfn));
 }
 
-export class Check {
-	protected static rowIsFull(row: Array<Token>): boolean {
-		return row.length === 7 ? true : false;
-	}
-
-	protected static displayFull() {
-		console.log(`Column full!`);
-	}
-
-	protected static noWinner(turn: number): boolean {
-		return turn === 42 ? true : false;
-	}
-
-	protected static displayNoWinner() {
-		console.log(`No winner`);
-	}
-
-	protected static isWinner(
-		grid: Token[],
-		token: Token,
-		turn: number
-	): boolean {
-		return !this.enoughTurn(turn) ? false : this.Horizontal(token);
-	}
-
-	private static enoughTurn(turn: number) {
-		return turn >= 4 ? true : false;
-	}
-
-	private static Horizontal(token: Token): boolean {}
-}
-
-export class Connect4 extends Check {
+export class Connect4 {
 	private grid: Token[][] = [];
 	private players: Player[] = [];
 	private turn: number;
 
 	constructor() {
-		super();
 		this.generate(7);
 		this.players.push(Player.create(1));
 		this.players.push(Player.create(2));
@@ -58,24 +25,37 @@ export class Connect4 extends Check {
 	}
 
 	public play(col: number) {
-		if (Check.noWinner(this.turn)) {
-			Check.displayNoWinner();
+		if (!this.noWinner) {
 		} else {
 			this.addToCol(col);
 		}
+		this.turn++;
 	}
 
 	private Whoplay(): Player {
-		return this.turn % 2 === 0 ? this.players[0] : this.players[1];
+		return this.turn % 2 === 0 ? this.players[1] : this.players[0];
 	}
 
 	private addToCol(col: number) {
-		this.grid[col][0] === undefined
-			? this.grid[col].push(new Token(col, 0, this.Whoplay().getId()))
+		this.grid[col].length === 7
+			? this.isFull()
+			: this.grid[col][0] === undefined
+			? this.grid[col].push(new Token(0, col, this.Whoplay().getId()))
 			: this.grid[col].push(
-					new Token(col, this.grid[col].length - 1, this.Whoplay().getId())
+					new Token(this.grid[col].length, col, this.Whoplay().getId())
 			  );
-		debugger;
+	}
+
+	private isFull() {
+		console.log(`Column is full`);
+	}
+
+	private isHoryzontal(): boolean {
+		return true;
+	}
+
+	private noWinner(): boolean {
+		return this.turn === 42 ? true : false;
 	}
 }
 
@@ -123,8 +103,15 @@ let game;
 game = new Connect4();
 game.play(1);
 game.play(1);
+game.play(1);
+game.play(1);
+game.play(1);
+game.play(1);
+game.play(1);
+game.play(1);
 game.play(2);
 game.play(2);
 game.play(3);
+debugger;
 game.play(3);
 game.play(4);
