@@ -1,0 +1,7 @@
+C:\Users\Alexandre\source\repos\codeWars\CSharp\ArrayDiff\obj\Debug\ArrayDiff.csprojAssemblyReference.cache
+C:\Users\Alexandre\source\repos\codeWars\CSharp\ArrayDiff\obj\Debug\ArrayDiff.csproj.CoreCompileInputs.cache
+C:\Users\Alexandre\source\repos\codeWars\CSharp\ArrayDiff\bin\Debug\ArrayDiff.exe.config
+C:\Users\Alexandre\source\repos\codeWars\CSharp\ArrayDiff\bin\Debug\ArrayDiff.exe
+C:\Users\Alexandre\source\repos\codeWars\CSharp\ArrayDiff\bin\Debug\ArrayDiff.pdb
+C:\Users\Alexandre\source\repos\codeWars\CSharp\ArrayDiff\obj\Debug\ArrayDiff.exe
+C:\Users\Alexandre\source\repos\codeWars\CSharp\ArrayDiff\obj\Debug\ArrayDiff.pdb

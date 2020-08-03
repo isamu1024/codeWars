@@ -1,0 +1,7 @@
+C:\Users\Alexandre\source\repos\codeWars\CSharp\DirectionsReduction\bin\Debug\DirectionsReduction.exe.config
+C:\Users\Alexandre\source\repos\codeWars\CSharp\DirectionsReduction\bin\Debug\DirectionsReduction.exe
+C:\Users\Alexandre\source\repos\codeWars\CSharp\DirectionsReduction\bin\Debug\DirectionsReduction.pdb
+C:\Users\Alexandre\source\repos\codeWars\CSharp\DirectionsReduction\obj\Debug\DirectionsReduction.csprojAssemblyReference.cache
+C:\Users\Alexandre\source\repos\codeWars\CSharp\DirectionsReduction\obj\Debug\DirectionsReduction.csproj.CoreCompileInputs.cache
+C:\Users\Alexandre\source\repos\codeWars\CSharp\DirectionsReduction\obj\Debug\DirectionsReduction.exe
+C:\Users\Alexandre\source\repos\codeWars\CSharp\DirectionsReduction\obj\Debug\DirectionsReduction.pdb

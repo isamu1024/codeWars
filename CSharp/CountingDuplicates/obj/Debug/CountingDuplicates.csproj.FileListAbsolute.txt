@@ -1,0 +1,7 @@
+C:\Users\Alexandre\source\repos\codeWars\CSharp\CountingDuplicates\obj\Debug\CountingDuplicates.csprojAssemblyReference.cache
+C:\Users\Alexandre\source\repos\codeWars\CSharp\CountingDuplicates\obj\Debug\CountingDuplicates.csproj.CoreCompileInputs.cache
+C:\Users\Alexandre\source\repos\codeWars\CSharp\CountingDuplicates\bin\Debug\CountingDuplicates.exe.config
+C:\Users\Alexandre\source\repos\codeWars\CSharp\CountingDuplicates\bin\Debug\CountingDuplicates.exe
+C:\Users\Alexandre\source\repos\codeWars\CSharp\CountingDuplicates\bin\Debug\CountingDuplicates.pdb
+C:\Users\Alexandre\source\repos\codeWars\CSharp\CountingDuplicates\obj\Debug\CountingDuplicates.exe
+C:\Users\Alexandre\source\repos\codeWars\CSharp\CountingDuplicates\obj\Debug\CountingDuplicates.pdb

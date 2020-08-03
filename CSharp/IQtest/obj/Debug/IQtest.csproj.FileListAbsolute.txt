@@ -1,0 +1,7 @@
+C:\Users\Alexandre\source\repos\codeWars\CSharp\IQtest\bin\Debug\IQtest.exe.config
+C:\Users\Alexandre\source\repos\codeWars\CSharp\IQtest\bin\Debug\IQtest.exe
+C:\Users\Alexandre\source\repos\codeWars\CSharp\IQtest\bin\Debug\IQtest.pdb
+C:\Users\Alexandre\source\repos\codeWars\CSharp\IQtest\obj\Debug\IQtest.csprojAssemblyReference.cache
+C:\Users\Alexandre\source\repos\codeWars\CSharp\IQtest\obj\Debug\IQtest.csproj.CoreCompileInputs.cache
+C:\Users\Alexandre\source\repos\codeWars\CSharp\IQtest\obj\Debug\IQtest.exe
+C:\Users\Alexandre\source\repos\codeWars\CSharp\IQtest\obj\Debug\IQtest.pdb
