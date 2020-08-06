@@ -1,0 +1,7 @@
+C:\Users\Alex et Rozenn\source\repos\codeWars\CSharp\CrackThePin\bin\Debug\CrackThePin.exe.config
+C:\Users\Alex et Rozenn\source\repos\codeWars\CSharp\CrackThePin\bin\Debug\CrackThePin.exe
+C:\Users\Alex et Rozenn\source\repos\codeWars\CSharp\CrackThePin\bin\Debug\CrackThePin.pdb
+C:\Users\Alex et Rozenn\source\repos\codeWars\CSharp\CrackThePin\obj\Debug\CrackThePin.csprojAssemblyReference.cache
+C:\Users\Alex et Rozenn\source\repos\codeWars\CSharp\CrackThePin\obj\Debug\CrackThePin.csproj.CoreCompileInputs.cache
+C:\Users\Alex et Rozenn\source\repos\codeWars\CSharp\CrackThePin\obj\Debug\CrackThePin.exe
+C:\Users\Alex et Rozenn\source\repos\codeWars\CSharp\CrackThePin\obj\Debug\CrackThePin.pdb

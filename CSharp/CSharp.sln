@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectionsReduction", "Dire
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perso_TestThread", "Perso_TestThread\Perso_TestThread.csproj", "{DF1204B6-C6B0-44E4-AD74-8DEC09C3C4C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrackThePin", "CrackThePin\CrackThePin.csproj", "{F2DD2BB8-95F3-4BA2-AD48-137E21E84023}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TitleCase", "TitleCase\TitleCase.csproj", "{F9911C1C-3D0C-4433-9B3C-9E03C492BD50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{DF1204B6-C6B0-44E4-AD74-8DEC09C3C4C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF1204B6-C6B0-44E4-AD74-8DEC09C3C4C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF1204B6-C6B0-44E4-AD74-8DEC09C3C4C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2DD2BB8-95F3-4BA2-AD48-137E21E84023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2DD2BB8-95F3-4BA2-AD48-137E21E84023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2DD2BB8-95F3-4BA2-AD48-137E21E84023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2DD2BB8-95F3-4BA2-AD48-137E21E84023}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9911C1C-3D0C-4433-9B3C-9E03C492BD50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9911C1C-3D0C-4433-9B3C-9E03C492BD50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9911C1C-3D0C-4433-9B3C-9E03C492BD50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9911C1C-3D0C-4433-9B3C-9E03C492BD50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
