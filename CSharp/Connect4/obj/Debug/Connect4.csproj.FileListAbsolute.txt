@@ -1,0 +1,7 @@
+C:\Users\Alex et Rozenn\source\repos\codeWars\CSharp\Connect4\bin\Debug\Connect4.exe.config
+C:\Users\Alex et Rozenn\source\repos\codeWars\CSharp\Connect4\bin\Debug\Connect4.exe
+C:\Users\Alex et Rozenn\source\repos\codeWars\CSharp\Connect4\bin\Debug\Connect4.pdb
+C:\Users\Alex et Rozenn\source\repos\codeWars\CSharp\Connect4\obj\Debug\Connect4.csprojAssemblyReference.cache
+C:\Users\Alex et Rozenn\source\repos\codeWars\CSharp\Connect4\obj\Debug\Connect4.csproj.CoreCompileInputs.cache
+C:\Users\Alex et Rozenn\source\repos\codeWars\CSharp\Connect4\obj\Debug\Connect4.exe
+C:\Users\Alex et Rozenn\source\repos\codeWars\CSharp\Connect4\obj\Debug\Connect4.pdb
