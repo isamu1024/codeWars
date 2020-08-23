@@ -5,3 +5,10 @@ C:\Users\Alex et Rozenn\source\repos\codeWars\CSharp\Connect4\obj\Debug\Connect4
 C:\Users\Alex et Rozenn\source\repos\codeWars\CSharp\Connect4\obj\Debug\Connect4.csproj.CoreCompileInputs.cache
 C:\Users\Alex et Rozenn\source\repos\codeWars\CSharp\Connect4\obj\Debug\Connect4.exe
 C:\Users\Alex et Rozenn\source\repos\codeWars\CSharp\Connect4\obj\Debug\Connect4.pdb
+C:\Users\alexa\Source\Repos\codeWars\CSharp\Connect4\bin\Debug\Connect4.exe.config
+C:\Users\alexa\Source\Repos\codeWars\CSharp\Connect4\bin\Debug\Connect4.exe
+C:\Users\alexa\Source\Repos\codeWars\CSharp\Connect4\bin\Debug\Connect4.pdb
+C:\Users\alexa\Source\Repos\codeWars\CSharp\Connect4\obj\Debug\Connect4.csprojAssemblyReference.cache
+C:\Users\alexa\Source\Repos\codeWars\CSharp\Connect4\obj\Debug\Connect4.csproj.CoreCompileInputs.cache
+C:\Users\alexa\Source\Repos\codeWars\CSharp\Connect4\obj\Debug\Connect4.exe
+C:\Users\alexa\Source\Repos\codeWars\CSharp\Connect4\obj\Debug\Connect4.pdb

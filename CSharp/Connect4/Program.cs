@@ -12,69 +12,45 @@ namespace Connect4
     {
         static void Main()
         {
-            Game game = new Game();
-            game.addToColumn(0);
-            game.addToColumn(0);
-            game.addToColumn(0);
-            game.addToColumn(0);
-            game.addToColumn(0);
-            game.addToColumn(0);
-            game.addToColumn(0);
+
+
+
+
+
+            
+
 
             Console.Read();
         }
-    }
 
-    public struct Players
-    {
-        public Players(int id)
-        {
-            Id = id;
-        }
+        public class Connect4 {
 
-        public int Id { get; private set; }
+            List<int>[] grid = new List<int>[7];
+            int currentPlayer;
+            Boolean hasPlayed;
 
-    }
-
-    public struct Token
-    {
-        public int PlayerId { get; private set; }
-
-        public Token(int playerId)
-        {
-            PlayerId = playerId;
-        }
-
-    }
-
-    public class Game
-    {
-        private Stack<Token>[] grid;
-        private Players[] players;
-        public Game()
-        {
-            grid = new Stack<Token>[7];
-            players = new Players[]{ new Players(1), new Players(2) };
-            populate();
-        }
-
-        private void populate()
-        {
-            for (int i = 0; i < grid.Length; i++)
+            public Connect4()
             {
-                grid[i] = new Stack<Token>();
             }
+
+            private void Populate()
+            {
+                for (int i = 0; i < grid.Length; i++)
+                {
+                    grid[i] = new List<int>();
+                }
+            }
+
+            public string play(int col)
+            {
+                grid[col].ToArray().Length < 1 ? grid[col].Add(currentPlayer) : hasPlayed = false;
+    
+            return "";
+            }
+
         }
-
-        public void addToColumn(int column)
-        {
-            if (grid[column].ToArray().Length != 5)
-                grid[column].Push(new Token(1));
-           
-        }
-
-
     }
+
 }
 
 
