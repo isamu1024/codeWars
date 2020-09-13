@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CSharp",
+    "\\CSharp\\Connect4"
   ],
+  "SelectedNode": "\\CSharp\\CSharp.sln",
   "PreviewInSolutionExplorer": false
 }
